@@ -1,9 +1,11 @@
 import { Box, Text, Input, Button, Image, Link } from "@chakra-ui/react";
 import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 import "../styles.css";
 function Home() {
   return (
     <>
+    <Navbar/>
       <Box backgroundColor="#f6f8f9">
         <Box
           width="70vw"

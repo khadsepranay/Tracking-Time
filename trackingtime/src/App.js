@@ -1,9 +1,9 @@
 import AllRoutes from "./AllRoutes/Routes";
-import Navbar from "../src/Components/Navbar";
+import Navbar from "./Components/Navbar";
 function App() {
   return(
     <>
-    <Navbar />
+    <Navbar/>
     <AllRoutes/>
     </>
   )

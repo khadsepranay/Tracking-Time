@@ -1,12 +1,14 @@
 import {Routes,Route} from "react-router-dom"
 import Home from "../Pages/Home"
+import Integrations from "../Pages/Intergrations"
+import Blog from "../Pages/Blog"
 
 function AllRoutes(){
     return(
         <Routes>
             <Route path="/" element={<Home/>}></Route>
-            <Route path="/integration"></Route>
-            <Route path="/blog"></Route>
+            <Route path="/integration" element={<Integrations/>}></Route>
+            <Route path="/blog" element={<Blog/>}></Route>
             <Route path="/feaures/timetracker"></Route>
             <Route path="/feaures/projectmanagement"></Route>
             <Route path="/feaures/onlinetimesheet"></Route>

@@ -6,9 +6,9 @@ import {
   Menu,
   MenuButton,
   MenuItem,
-  MenuList,
+  MenuList, 
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom"
 
 function Navbar() {
   return (
@@ -43,7 +43,7 @@ function Navbar() {
               </Link>
             </Box>
             <Box>
-              <Link to="/integration">
+              <Link to="/blog">
                 <Text color="#242954" fontWeight={700}>
                   BLOG
                 </Text>
