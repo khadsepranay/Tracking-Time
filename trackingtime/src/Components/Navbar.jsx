@@ -9,8 +9,12 @@ import {
   MenuList, 
 } from "@chakra-ui/react";
 import {Link} from "react-router-dom"
+import {useContext} from "react"
+import {AuthContext} from "../AuthContextProvider/AuthContextProvider"
 
 function Navbar() {
+  let {state,dispatch} = useContext(AuthContext)
+  console.log(state)
   return (
     <Box
       width="100vw"
@@ -97,23 +101,40 @@ function Navbar() {
                 </Text>
               </Link>
             </Box>
-            <Box>
-              <Link to="/login">
-                <Text
-                  w="100%"
-                  backgroundColor="#ED565E"
-                  fontSize={12}
-                  as="b"
-                  borderWidth="2px"
-                  borderColor="#ED565A"
-                  padding="8px 25px"
-                  color="#F6F8F9"
-                  borderRadius="5px"
-                >
-                  LOGIN
-                </Text>
-              </Link>
-            </Box>
+            {
+              !state.isAuth?
+              <Box>
+                <Link to="/login">
+                  <Text
+                    w="100%"
+                    backgroundColor="#ED565E"
+                    fontSize={12}
+                    as="b"
+                    borderWidth="2px"
+                    borderColor="#ED565A"
+                    padding="8px 25px"
+                    color="#F6F8F9"
+                    borderRadius="5px"
+                  >
+                    LOGIN
+                  </Text>
+                </Link>
+              </Box>:<Box onClick={()=>dispatch({type:"isAuth",payload:false})}>
+                  <Text
+                    w="100%"
+                    backgroundColor="#ED565E"
+                    fontSize={12}
+                    as="b"
+                    borderWidth="2px"
+                    borderColor="#ED565A"
+                    padding="8px 25px"
+                    color="#F6F8F9"
+                    borderRadius="5px"
+                  >
+                    LOGOUT
+                  </Text>
+              </Box>
+            }
           </Flex>
         </Flex>
       </Box>
