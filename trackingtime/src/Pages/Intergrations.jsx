@@ -2,8 +2,11 @@ import { Text, Box, Stack, Link, Button, Input, Image } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import Data from "../IntegrationData.json";
 import Footer from "../Components/Footer";
+import { useContext } from "react";
+import { AuthContext } from "../AuthContextProvider/AuthContextProvider";
 
 function Integrations() {
+  let { integrationData, Search } = useContext(AuthContext);
   return (
     <Box>
       <Box
@@ -46,6 +49,7 @@ function Integrations() {
               width="53%"
               height="75px"
               boxShadow="1px 1px 10px rgb(0,0,0,0.1)"
+              onChange={Search}
             />
             <Search2Icon pos="relative" left="-40px" />
           </Box>
@@ -80,8 +84,8 @@ function Integrations() {
             gap="100px 50px"
             margin="50px auto"
           >
-            {Data.Data &&
-              Data.Data.map((el) => {
+            {integrationData &&
+              integrationData.map((el) => {
                 return (
                   <Box>
                     <Stack>
@@ -146,7 +150,7 @@ function Integrations() {
                     color="gray"
                     fontSize="18px"
                     lineHeight="30px"
-                    width="70%" 
+                    width="70%"
                     marginBottom="50px"
                   >
                     Track your time everywhere you work with our mobile apps for
@@ -165,7 +169,7 @@ function Integrations() {
             </Box>
           </Box>
         </Box>
-      <Footer/>
+        <Footer />
       </Box>
     </Box>
   );

@@ -5,7 +5,7 @@ import "../styles.css";
 function Home() {
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <Box backgroundColor="#f6f8f9">
         <Box
           width="70vw"
