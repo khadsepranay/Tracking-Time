@@ -47,6 +47,7 @@ function Home() {
             justifyContent="space-around"
             width="35vw"
             margin="40px auto"
+            gap='30px'
           >
             <Box>
               <Input

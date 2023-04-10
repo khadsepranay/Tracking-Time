@@ -5,6 +5,7 @@ import {
   Container,
   Stack,
   Box,
+  Heading
 } from "@chakra-ui/react";
 import { AuthContext } from "../AuthContextProvider/AuthContextProvider";
 import { useContext, useState } from "react";
@@ -52,7 +53,7 @@ function Login() {
     <Box bg="rgb(224,224,224,0.5)" width="100vw" height="100vh">
       <Container pos="relative" top="180px">
         <FormControl>
-          <Box boxShadow="4px 2px 10px rgb(64,64,64,0.5)">
+          <Box boxShadow="4px 2px 10px rgb(64,64,64,0.5)" backgroundColor={'white'}>
             <Stack padding="30px" spacing="30px">
               <Input
                 type="text"
@@ -86,6 +87,13 @@ function Login() {
             </Stack>
           </Box>
         </FormControl>
+        <Box style={{color:'grey',marginTop:'40px',textAlign:'center'}}>
+          <Stack>
+        <Heading as='h6' size='md' noOfLines={1} color='gray'>Use following credential to login</Heading>
+        <Box style={{color:'green'}}>Email : eve.holt@reqres.in</Box>
+        <Box style={{color:'green'}}>Password : 1234</Box>
+        </Stack>
+        </Box>
       </Container>
     </Box>
   );
