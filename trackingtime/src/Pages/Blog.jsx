@@ -43,6 +43,7 @@ function Blog() {
                   width="180px"
                   margin="70px auto"
                   borderWidth="2px"
+                  _hover={{ color:'#3A609B', borderColor:'#3A609B',backgroundColor:'white' }}
                 >
                   READ ARTICLE
                 </Button>
@@ -64,13 +65,9 @@ function Blog() {
                 <Box boxShadow="1px 1px 10px rgb(0,0,0,0.3)">
                   <Image
                     src={el.Image}
-                    bg={
-                      i % 2 !== 0
-                        ? "#FF6164"
-                        : i % 3 !== 0
-                        ? "blue.500"
-                        : "green.500"
-                    }
+                    bg={`rgb(${Math.random() * 255} ${Math.random() * 255} ${
+                      Math.random() * 255
+                    })`}
                     height="200px"
                     width="100%"
                   ></Image>

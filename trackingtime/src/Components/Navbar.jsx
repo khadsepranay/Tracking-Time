@@ -45,6 +45,16 @@ function Navbar() {
           />
           <Flex justifyContent="space-between" gap="40px">
             <Box>
+              <Link to="/">
+                <Text
+                  color="#242954"
+                  fontWeight={700}
+                >
+                  HOME
+                </Text>
+              </Link>
+            </Box>
+            <Box>
               <Link to="/integration">
                 <Text color="#242954" fontWeight={700}>
                   INTEGRATIONS
@@ -91,23 +101,6 @@ function Navbar() {
                 </MenuList>
               </Menu>
             </Box>
-            <Box>
-              <Link to="/login">
-                <Text
-                  w="100%"
-                  backgroundColor="#F6F8F9"
-                  fontSize={12}
-                  as="b"
-                  borderWidth="2px"
-                  borderColor="#ED565A"
-                  padding="8px 25px"
-                  color="#ED565E"
-                  borderRadius="5px"
-                >
-                  TRY IT FREE
-                </Text>
-              </Link>
-            </Box>
             {!state.isAuth ? (
               <Box>
                 <Link to="/login">
@@ -138,6 +131,7 @@ function Navbar() {
                   padding="8px 25px"
                   color="#F6F8F9"
                   borderRadius="5px"
+                  _hover={{backgroundColor:'#F03339'}}
                 >
                   LOGOUT
                 </Text>

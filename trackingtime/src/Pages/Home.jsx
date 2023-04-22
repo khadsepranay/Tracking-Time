@@ -69,6 +69,7 @@ function Home() {
                 margin="0 20px"
                 padding="5px 20px"
                 width="110%"
+                _hover={{backgroundColor:'#F03339'}}
               >
                 START FOR FREE!
               </Button>
@@ -437,7 +438,8 @@ function Home() {
                   color="white"
                   margin="0 20px"
                   padding="5px 20px"
-                  width="110%"
+                  width="110%" 
+                _hover={{backgroundColor:'#F03339'}}
                 >
                   START FOR FREE!
                 </Button>

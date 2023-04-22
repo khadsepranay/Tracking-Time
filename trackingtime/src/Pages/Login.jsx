@@ -108,7 +108,7 @@ function Login() {
         </FormControl>
         <Box style={{color:'grey',marginTop:'40px',textAlign:'center'}}>
           <Stack>
-        <Heading as='h6' size='md' noOfLines={1} color='gray'>Use following credential to login</Heading>
+        <Heading as='h6' size='md' noOfLines={1} color='gray'>Use following credential for logging in</Heading>
         <Box style={{color:'green'}}>Email : eve.holt@reqres.in</Box>
         <Box style={{color:'green'}}>Password : 1234</Box>
         </Stack>
