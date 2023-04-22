@@ -37,7 +37,7 @@ In this project, I have made the following things :
 
 ## Log In page :
 
-![signup](ReadMeImages/Login.png)
+![Login](ReadMeImages/Login.png)
 
 ## Integration Page:
 
