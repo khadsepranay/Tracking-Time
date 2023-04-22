@@ -8,7 +8,7 @@ import {
   Heading
 } from "@chakra-ui/react";
 import { AuthContext } from "../AuthContextProvider/AuthContextProvider";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 
@@ -21,6 +21,15 @@ function Login() {
   let { state, dispatch } = useContext(AuthContext);
   let [info, setInfo] = useState(Info);
   let [buttonLoading, setButtonLoading] = useState(false);
+  let [buttonDisabled,setButtonDisabled] = useState(true)
+
+  useEffect(()=>{
+    if(info.email=='' || info.name=='' || info.password==''){
+      setButtonDisabled(true)
+    }else{
+      setButtonDisabled(false)
+    }
+  },[Info])
 
   function handleChangeInput(e) {
     setInfo({ ...info, [e.target.name]: e.target.value });
@@ -34,6 +43,7 @@ function Login() {
         password: info.password,
       })
       .then((res) => {
+        alert('Logged in successfully')
         dispatch({ type: "isAuth", payload: true });
         dispatch({ type: "token", payload: res.data.token });
         dispatch({ type: "email", payload: info.email });
@@ -41,6 +51,7 @@ function Login() {
         setButtonLoading(false);
       })
       .catch((err) => {
+        alert('Invalid Credential')
         setButtonLoading(false);
       });
   }
@@ -50,37 +61,45 @@ function Login() {
   }
 
   return (
-    <Box bg="rgb(224,224,224,0.5)" width="100vw" height="100vh">
+    <Box bg="#212121" width="100vw" height="100vh">
       <Container pos="relative" top="180px">
         <FormControl>
-          <Box boxShadow="4px 2px 10px rgb(64,64,64,0.5)" backgroundColor={'white'}>
+          <Box boxShadow="1px 1px 3px #111111" backgroundColor={'#212121'}>
             <Stack padding="30px" spacing="30px">
               <Input
                 type="text"
                 placeholder="User's Name"
                 name="name"
                 onChange={(e) => handleChangeInput(e)}
-                borderColor="black"
+                borderColor="#808080"
+                color='white'
+                _placeholder={{color:'#c0c0c0'}}
               />
               <Input
                 type="email"
                 placeholder="E-mail Address"
                 name="email"
                 onChange={(e) => handleChangeInput(e)}
-                borderColor="black"
+                borderColor="#808080"
+                color='white'
+                _placeholder={{color:'#c0c0c0'}}
               />
               <Input
                 type="password"
                 placeholder="Password"
                 name="password"
                 onChange={(e) => handleChangeInput(e)}
-                borderColor="black"
+                borderColor="#808080"
+                color='white'
+                _placeholder={{color:'#c0c0c0'}}
               ></Input>
               <Button
                 isLoading={buttonLoading}
-                bg="#FF0055"
+                backgroundColor={'#404040'}
                 color="white"
                 onClick={handleSubmit}
+                sx={{_hover:{backgroundColor:'green'}}}
+                isDisabled={buttonDisabled}
               >
                 Log In
               </Button>
