@@ -6,7 +6,6 @@ import Footer from "../Components/Footer";
 function Blog() {
   return (
     <>
-      <Navbar />
       <Box
         position="relative"
         top="66px"
