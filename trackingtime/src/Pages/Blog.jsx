@@ -16,6 +16,7 @@ function Blog() {
       >
         <Box bg="#3A609B" color="white" alignItems="center">
           <Box width="80vw" margin="auto" textAlign="center">
+            <Stack>
               <Text
                 margin="50px auto 30px auto"
                 fontSize="12px"
