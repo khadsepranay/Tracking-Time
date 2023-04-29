@@ -65,7 +65,6 @@ function Login() {
       <Container pos="relative" top="180px">
         <FormControl>
           <Box boxShadow="1px 1px 3px #111111" backgroundColor={'#212121'}>
-            <Stack padding="30px" spacing="30px">
               <Input
                 type="text"
                 placeholder="User's Name"
