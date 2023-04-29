@@ -68,10 +68,6 @@ function Login() {
             <Stack padding="30px" spacing="30px">
               <Input
                 type="text"
-                placeholder="User's Name"
-                name="name"
-                onChange={(e) => handleChangeInput(e)}
-                borderColor="#808080"
                 color='white'
                 _placeholder={{color:'#c0c0c0'}}
               />
