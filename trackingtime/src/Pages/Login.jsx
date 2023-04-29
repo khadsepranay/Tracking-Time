@@ -68,6 +68,7 @@ function Login() {
             <Stack padding="30px" spacing="30px">
               <Input
                 type="text"
+                placeholder="User's Name"
                 name="name"
                 borderColor="#808080"
                 color='white'
