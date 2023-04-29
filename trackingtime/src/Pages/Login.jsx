@@ -71,6 +71,8 @@ function Login() {
                 placeholder="User's Name"
                 name="name"
                 onChange={(e) => handleChangeInput(e)}
+                borderColor="#808080"
+                color='white'
                 _placeholder={{color:'#c0c0c0'}}
               />
               <Input
