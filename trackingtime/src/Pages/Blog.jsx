@@ -75,13 +75,6 @@ function Blog() {
                     <Text
                       color="#242954"
                       fontWeight="bold"
-                      margin="20px auto"
-                      fontSize="18px"
-                    >
-                      {el.Title}
-                    </Text>
-                  </Box>
-                </Box>
               );
             })}
         </Box>
