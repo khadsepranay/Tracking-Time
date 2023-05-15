@@ -24,3 +24,27 @@ function AuthContextProvider({ children }) {
       case "email":
         return { ...state, email: action.payload };
       case "name":
+        return { ...state, name: action.payload };
+      default:
+        return state;
+    }
+  }
+  function Search(e) {
+    setSearchValue(e.target.value);
+  }
+
+  useEffect(() => {
+    let newData = IntegrationData.Data.filter((el) => {
+      return el.Title.includes(searchValue);
+    });
+    setIntegrationData(newData);
+  }, [searchValue]);
+
+  return (
+    <AuthContext.Provider value={{ state, dispatch, Search, integrationData }}>
+      {children}
+    </AuthContext.Provider>
+  );
+}
+
+export default AuthContextProvider;
