@@ -64,6 +64,61 @@ function Login() {
     <Box bg="#212121" width="100vw" height="100vh">
       <Container pos="relative" top="180px">
         <FormControl>
+          <Box boxShadow="1px 1px 3px #111111" backgroundColor={'#212121'}>
+            <Stack padding="30px" spacing="30px">
+              <Input
+                type="text"
+                placeholder="User's Name"
+                name="name"
+                onChange={(e) => handleChangeInput(e)}
+                borderColor="#808080"
+                color='white'
+                _placeholder={{color:'#c0c0c0'}}
+              />
+              <Input
+                type="email"
+                placeholder="E-mail Address"
+                name="email"
+                onChange={(e) => handleChangeInput(e)}
+                borderColor="#808080"
+                color='white'
+                _placeholder={{color:'#c0c0c0'}}
+              />
+              <Input
+                type="password"
+                placeholder="Password"
+                name="password"
+                onChange={(e) => handleChangeInput(e)}
+                borderColor="#808080"
+                color='white'
+                _placeholder={{color:'#c0c0c0'}}
+              ></Input>
+              <Button
+                isLoading={buttonLoading}
+                backgroundColor={'#404040'}
+                color="white"
+                onClick={handleSubmit}
+                sx={{_hover:{backgroundColor:'green'}}}
+                isDisabled={buttonDisabled}
+              >
+                Log In
+              </Button>
+            </Stack>
+          </Box>
+        </FormControl>
+        <Box style={{color:'grey',marginTop:'40px',textAlign:'center'}}>
+          <Stack>
+        <Heading as='h6' size='md' noOfLines={1} color='gray'>Use following credential for logging in</Heading>
+        <Box style={{color:'green'}}>Email : eve.holt@reqres.in</Box>
+        <Box style={{color:'green'}}>Password : 1234</Box>
+        </Stack>
+        </Box>
+      </Container>
+    </Box>
+  );
+}
+
+export default Login;
 
 // eve.holt@reqres.in
 // cityslicka
