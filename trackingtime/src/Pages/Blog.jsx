@@ -74,3 +74,21 @@ function Blog() {
                   <Box width="85%" textAlign="center" margin="auto">
                     <Text
                       color="#242954"
+                      fontWeight="bold"
+                      margin="20px auto"
+                      fontSize="18px"
+                    >
+                      {el.Title}
+                    </Text>
+                  </Box>
+                </Box>
+              );
+            })}
+        </Box>
+        <Footer />
+      </Box>
+    </>
+  );
+}
+
+export default Blog;
