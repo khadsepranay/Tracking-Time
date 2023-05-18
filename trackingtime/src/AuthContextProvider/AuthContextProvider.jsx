@@ -29,15 +29,6 @@ function AuthContextProvider({ children }) {
         return state;
     }
   }
-  function Search(e) {
-    setSearchValue(e.target.value);
-  }
-
-  useEffect(() => {
-    let newData = IntegrationData.Data.filter((el) => {
-      return el.Title.includes(searchValue);
-    });
-    setIntegrationData(newData);
   }, [searchValue]);
 
   return (
