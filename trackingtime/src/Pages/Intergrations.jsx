@@ -1,13 +1,6 @@
 import { Text, Box, Stack, Link, Button, Input, Image } from "@chakra-ui/react";
 import { Search2Icon } from "@chakra-ui/icons";
 import Data from "../IntegrationData.json";
-import Footer from "../Components/Footer";
-import { useContext } from "react";
-import { AuthContext } from "../AuthContextProvider/AuthContextProvider";
-
-function Integrations() {
-  let { integrationData, Search } = useContext(AuthContext);
-  return (
     <Box>
       <Box
         bg="#f6f8f9"
