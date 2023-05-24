@@ -12,13 +12,7 @@ function Integrations() {
       <Box
         bg="#f6f8f9"
         width="100vw"
-        fontFamily="font-family: -apple-system,system-ui,BlinkMacSystemFont"
-      >
-        <Box width="79vw" margin="auto" color="#242954" lineHeight="50px">
-          <Stack>
-            <Text
-              marginTop="150px"
-              letterSpacing={2.2}
+        fontFamily="font-family: -apple-system,system-u
               fontWeight="bold"
               fontSize="21px"
             >
