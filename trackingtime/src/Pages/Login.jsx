@@ -26,7 +26,7 @@ function Login() {
 
   useEffect(()=>{
     if(info.email=='' || info.name=='' || info.password==''){
-      setButtonDisabled(true)
+      setButtonDisabled(true)git
     }else{
       setButtonDisabled(false)
     }
