@@ -11,6 +11,7 @@ root.render(
   <AuthContextProvider>
     <BrowserRouter>
       <ChakraProvider>
+        
         <App />
       </ChakraProvider>
     </BrowserRouter>

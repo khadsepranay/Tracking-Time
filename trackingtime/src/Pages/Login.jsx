@@ -8,11 +8,12 @@ import {
   Heading
 } from "@chakra-ui/react";
 import { AuthContext } from "../AuthContextProvider/AuthContextProvider";
-import { useContext, useEffect, useState } from "react";
+import React,{ useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
 
 function Login() {
+  let ele = React.createElement('h1',{color:'white',backgroundColor:},'Hi')
   let Info = {
     email: "",
     password: "",
@@ -65,6 +66,8 @@ function Login() {
       <Container pos="relative" top="180px">
         <FormControl>
           <Box boxShadow="1px 1px 3px #111111" backgroundColor={'#212121'}>
+            
+          {ele}
             <Stack padding="30px" spacing="30px">
               <Input
                 type="text"
